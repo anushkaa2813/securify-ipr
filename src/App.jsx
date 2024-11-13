@@ -223,7 +223,7 @@ function App() {
             msg,
             signature
         );
-        document.querySelector('#valid').innerHTML = `<h1>${valid}</h1>`;
+        document.querySelector('#valid').innerHTML = <h1>${valid}</h1>;
     }
 
     async function saveData() {
@@ -287,7 +287,7 @@ function App() {
         const msg = document.querySelector('#msg').value;
         const signature = document.querySelector('#signature').value;
         const signerAddress = await state.contract.getSigner(msg, signature);
-        document.querySelector('#valid').innerHTML = `<h1>${signerAddress}</h1>`;
+        document.querySelector('#valid').innerHTML = <h1>${signerAddress}</h1>;
     }
 
     return (
